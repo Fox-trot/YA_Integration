@@ -1,0 +1,62 @@
+﻿{
+		"status": "OK",
+		  "result": 
+		  {
+		    "total": 1,
+		    "paging": 
+		    {
+		      "nextPageToken": "aG9tZSwgaXQZcyBj"
+		    },
+		    "shipmentItems": 
+		    [
+		      {
+		        "id": "11225",
+		        "orderId": "144736",
+		        "shopSku": "8681970351624",
+		        "itemName": "JACKET 0KAK53102EK GREY CHECK W",
+		        "boxCount": 1,
+		        "count": 1,
+		        "status": "CREATED",
+		        "estimatedPrice": 3000.00,
+		        "draftDate": "2021-04-20T21:12:26+03:00",
+		        "shipmentDate": "2021-04-20T09:00:00+03:00",
+		        "barcodes": 
+		        [
+		          "8681970351624"
+		        ]				
+		      },
+		      {
+		        "id": "11226",
+		        "orderId": "144737",
+		        "shopSku": "8681970351631",
+		        "itemName": "JACKET 0KAK53102EK GREY CHECK W",
+		        "boxCount": 1,
+		        "count": 1,
+		        "status": "CREATED",
+		        "estimatedPrice": 3000.00,
+		        "draftDate": "2021-04-20T21:12:26+03:00",
+		        "shipmentDate": "2021-04-20T09:00:00+03:00",
+		        "barcodes": 
+		        [
+		          "8681970351631"
+		        ]				
+		      },
+		      {
+		        "id": "11228",
+		        "orderId": "144740",
+		        "shopSku": "8681970351617",
+		        "itemName": "JACKET 0KAK53102EK GREY CHECK W",
+		        "boxCount": 1,
+		        "count": 1,
+		        "status": "CREATED",
+		        "estimatedPrice": 4000.00,
+		        "draftDate": "2021-04-20T21:12:26+03:00",
+		        "shipmentDate": "2021-04-20T09:00:00+03:00",
+		        "barcodes": 
+		        [
+		          "8698993346827"
+		        ]				
+		      }
+		    ]
+		  }
+		}

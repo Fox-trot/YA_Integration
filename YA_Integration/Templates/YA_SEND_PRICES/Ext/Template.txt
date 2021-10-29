@@ -1,0 +1,31 @@
+﻿{
+    "offers": [
+        {
+            "marketSku": 101230683868,
+            "price": {
+                "currencyId": "RUR",
+                "value": 2399,
+                "discountBase": 3999,
+                "vat": 7
+            }
+        },
+        {
+            "marketSku": 101230683871,
+            "price": {
+                "currencyId": "RUR",
+                "value": 2399,
+                "discountBase": 3999,
+                "vat": 7
+            }
+        },
+        {
+            "marketSku": 101230683872,
+            "price": {
+                "currencyId": "RUR",
+                "value": 2399,
+                "discountBase": 3999,
+                "vat": 7
+            }
+        }
+    ]
+}

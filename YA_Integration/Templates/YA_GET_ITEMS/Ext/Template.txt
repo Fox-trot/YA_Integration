@@ -1,0 +1,68 @@
+﻿{
+	"status": "OK",
+	"result": {
+		"paging": {},
+		"offerMappingEntries": [
+			{
+				"offer": {
+					"name": "1KAL98141OT L(40) 335 баклажановый",
+					"shopSku": "1KAL98141OT335L",
+					"category": "Свитеры и кардиганы",
+					"processingState": {
+						"status": "READY"
+					},
+					"availability": "ACTIVE"
+				},
+				"mapping": {
+					"marketSku": 101231074039,
+					"categoryId": 7811909
+				}
+			},
+			{
+				"offer": {
+					"name": "1KAL98141OT M(38) 335 баклажановый",
+					"shopSku": "1KAL98141OT335M",
+					"category": "Свитеры и кардиганы",
+					"processingState": {
+						"status": "READY"
+					},
+					"availability": "ACTIVE"
+				},
+				"mapping": {
+					"marketSku": 101231074040,
+					"categoryId": 7811909
+				}
+			},
+			{
+				"offer": {
+					"name": "1KAL98141OT S(36) 335 баклажановый",
+					"shopSku": "1KAL98141OT335S",
+					"category": "Свитеры и кардиганы",
+					"processingState": {
+						"status": "READY"
+					},
+					"availability": "ACTIVE"
+				},
+				"mapping": {
+					"marketSku": 101231074042,
+					"categoryId": 7811909
+				}
+			},
+			{
+				"offer": {
+					"name": "1KAL98141OT XS(34) 335 баклажановый",
+					"shopSku": "1KAL98141OT335XS",
+					"category": "Свитеры и кардиганы",
+					"processingState": {
+						"status": "READY"
+					},
+					"availability": "ACTIVE"
+				},
+				"mapping": {
+					"marketSku": 101231074041,
+					"categoryId": 7811909
+				}
+			}
+		]
+	}
+}
