@@ -384,6 +384,129 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаКатегории" id="161">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категории</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа категории</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКатегорииРасширеннаяПодсказка" id="162"/>
+					<ChildItems>
+						<Table name="Категории" id="163">
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Категории</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КатегорииКонтекстноеМеню" id="164"/>
+							<AutoCommandBar name="КатегорииКоманднаяПанель" id="165">
+								<ChildItems>
+									<Button name="КатегорииКомандаФайлЗагрузить" id="194">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаФайлЗагрузить</CommandName>
+										<ExtendedTooltip name="КатегорииКомандаФайлЗагрузитьРасширеннаяПодсказка" id="195"/>
+									</Button>
+									<Button name="КатегорииКомандаКатегорииЗаписать" id="202">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаКатегорииЗаписать</CommandName>
+										<ExtendedTooltip name="КатегорииКомандаКатегорииЗаписатьРасширеннаяПодсказка" id="203"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КатегорииРасширеннаяПодсказка" id="166"/>
+							<SearchStringAddition name="КатегорииСтрокаПоиска" id="167">
+								<AdditionSource>
+									<Item>Категории</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КатегорииСтрокаПоискаКонтекстноеМеню" id="168"/>
+								<ExtendedTooltip name="КатегорииСтрокаПоискаРасширеннаяПодсказка" id="169"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КатегорииСостояниеПросмотра" id="170">
+								<AdditionSource>
+									<Item>Категории</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КатегорииСостояниеПросмотраКонтекстноеМеню" id="171"/>
+								<ExtendedTooltip name="КатегорииСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КатегорииУправлениеПоиском" id="173">
+								<AdditionSource>
+									<Item>Категории</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КатегорииУправлениеПоискомКонтекстноеМеню" id="174"/>
+								<ExtendedTooltip name="КатегорииУправлениеПоискомРасширеннаяПодсказка" id="175"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КатегорииНомерСтроки" id="176">
+									<DataPath>Объект.Категории.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииНомерСтрокиКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="КатегорииНомерСтрокиРасширеннаяПодсказка" id="178"/>
+								</LabelField>
+								<CheckBoxField name="КатегорииОшибка" id="199">
+									<DataPath>Объект.Категории.Ошибка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КатегорииОшибкаКонтекстноеМеню" id="200"/>
+									<ExtendedTooltip name="КатегорииОшибкаРасширеннаяПодсказка" id="201"/>
+								</CheckBoxField>
+								<InputField name="Категории_MopDivision" id="179">
+									<DataPath>Объект.Категории.MopDivision</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категории_MopDivisionКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="Категории_MopDivisionРасширеннаяПодсказка" id="181"/>
+								</InputField>
+								<InputField name="Категории_MopDepartment" id="182">
+									<DataPath>Объект.Категории.MopDepartment</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категории_MopDepartmentКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="Категории_MopDepartmentРасширеннаяПодсказка" id="184"/>
+								</InputField>
+								<InputField name="Категории_MopSubDepartment" id="185">
+									<DataPath>Объект.Категории.MopSubDepartment</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категории_MopSubDepartmentКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="Категории_MopSubDepartmentРасширеннаяПодсказка" id="187"/>
+								</InputField>
+								<InputField name="Категории_MopCategory" id="188">
+									<DataPath>Объект.Категории.MopCategory</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категории_MopCategoryКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="Категории_MopCategoryРасширеннаяПодсказка" id="190"/>
+								</InputField>
+								<InputField name="Категории_MopClass" id="191">
+									<DataPath>Объект.Категории.MopClass</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категории_MopClassКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="Категории_MopClassРасширеннаяПодсказка" id="193"/>
+								</InputField>
+								<InputField name="КатегорииАттрибут" id="196">
+									<DataPath>Объект.Категории.Категория</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииАттрибутКонтекстноеМеню" id="197"/>
+									<ExtendedTooltip name="КатегорииАттрибутРасширеннаяПодсказка" id="198"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -610,6 +733,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаФайлЗагрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Цены</AssociatedTableElementId>
 		</Command>
 		<Command name="КомандаЦеныЗаписать" id="6">
@@ -622,7 +746,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команда цены записать</v8:content>
+					<v8:content>Записать в регистр</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -664,6 +788,27 @@
 				</v8:item>
 			</ToolTip>
 			<Action>CARDS_CREATE</Action>
+		</Command>
+		<Command name="КомандаКатегорииЗаписать" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категории записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категории записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаКатегорииЗаписать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<AssociatedTableElementId xsi:type="xs:string">Категории</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
