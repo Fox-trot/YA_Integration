@@ -496,12 +496,40 @@
 									<ContextMenu name="Категории_MopClassКонтекстноеМеню" id="192"/>
 									<ExtendedTooltip name="Категории_MopClassРасширеннаяПодсказка" id="193"/>
 								</InputField>
-								<InputField name="КатегорииАттрибут" id="196">
+								<InputField name="Категориимп_Категория" id="204">
+									<DataPath>Объект.Категории.мп_Категория</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Категориимп_КатегорияКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="Категориимп_КатегорияРасширеннаяПодсказка" id="206"/>
+								</InputField>
+								<InputField name="КатегорииКатегорияID" id="216">
+									<DataPath>Объект.Категории.КатегорияID</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииКатегорияIDКонтекстноеМеню" id="217"/>
+									<ExtendedTooltip name="КатегорииКатегорияIDРасширеннаяПодсказка" id="218"/>
+								</InputField>
+								<InputField name="КатегорииКатегория" id="207">
 									<DataPath>Объект.Категории.Категория</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КатегорииАттрибутКонтекстноеМеню" id="197"/>
-									<ExtendedTooltip name="КатегорииАттрибутРасширеннаяПодсказка" id="198"/>
+									<ContextMenu name="КатегорииКатегорияКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="КатегорииКатегорияРасширеннаяПодсказка" id="209"/>
+								</InputField>
+								<InputField name="КатегорииКомплектацияID" id="210">
+									<DataPath>Объект.Категории.КомплектацияID</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииКомплектацияIDКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="КатегорииКомплектацияIDРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="КатегорииКомплектация" id="213">
+									<DataPath>Объект.Категории.Комплектация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КатегорииКомплектацияКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="КатегорииКомплектацияРасширеннаяПодсказка" id="215"/>
 								</InputField>
 							</ChildItems>
 						</Table>
