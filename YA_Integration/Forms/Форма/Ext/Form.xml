@@ -551,7 +551,6 @@
 					<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="220"/>
 					<ChildItems>
 						<Table name="Цвета" id="221">
-							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Цвета</DataPath>
@@ -588,7 +587,6 @@
 								<ExtendedTooltip name="ЦветаСтрокаПоискаРасширеннаяПодсказка" id="227"/>
 							</SearchStringAddition>
 							<ViewStatusAddition name="ЦветаСостояниеПросмотра" id="228">
-								<Enabled>false</Enabled>
 								<AdditionSource>
 									<Item>Цвета</Item>
 									<Type>ViewStatusRepresentation</Type>
@@ -597,7 +595,6 @@
 								<ExtendedTooltip name="ЦветаСостояниеПросмотраРасширеннаяПодсказка" id="230"/>
 							</ViewStatusAddition>
 							<SearchControlAddition name="ЦветаУправлениеПоиском" id="231">
-								<Enabled>false</Enabled>
 								<AdditionSource>
 									<Item>Цвета</Item>
 									<Type>SearchControl</Type>
@@ -713,6 +710,110 @@
 									<ContextMenu name="ГабаритыЗначениеКонтекстноеМеню" id="285"/>
 									<ExtendedTooltip name="ГабаритыЗначениеРасширеннаяПодсказка" id="286"/>
 								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИмпорт" id="289">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Импорт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа импорт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИмпортРасширеннаяПодсказка" id="290"/>
+					<ChildItems>
+						<Table name="Импорт" id="293">
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Импорт</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИмпортКонтекстноеМеню" id="294"/>
+							<AutoCommandBar name="ИмпортКоманднаяПанель" id="295">
+								<ChildItems>
+									<Button name="КомандаФайлЗагрузить" id="291">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаФайлЗагрузить</CommandName>
+										<ExtendedTooltip name="КомандаФайлЗагрузитьРасширеннаяПодсказка" id="292"/>
+									</Button>
+									<Button name="ИмпортКомандаИмпортЗаписать" id="324">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаИмпортЗаписать</CommandName>
+										<ExtendedTooltip name="ИмпортКомандаИмпортЗаписатьРасширеннаяПодсказка" id="325"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИмпортРасширеннаяПодсказка" id="296"/>
+							<SearchStringAddition name="ИмпортСтрокаПоиска" id="297">
+								<AdditionSource>
+									<Item>Импорт</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИмпортСтрокаПоискаКонтекстноеМеню" id="298"/>
+								<ExtendedTooltip name="ИмпортСтрокаПоискаРасширеннаяПодсказка" id="299"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИмпортСостояниеПросмотра" id="300">
+								<AdditionSource>
+									<Item>Импорт</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИмпортСостояниеПросмотраКонтекстноеМеню" id="301"/>
+								<ExtendedTooltip name="ИмпортСостояниеПросмотраРасширеннаяПодсказка" id="302"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИмпортУправлениеПоиском" id="303">
+								<AdditionSource>
+									<Item>Импорт</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИмпортУправлениеПоискомКонтекстноеМеню" id="304"/>
+								<ExtendedTooltip name="ИмпортУправлениеПоискомРасширеннаяПодсказка" id="305"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИмпортНомерСтроки" id="306">
+									<DataPath>Объект.Импорт.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортНомерСтрокиКонтекстноеМеню" id="307"/>
+									<ExtendedTooltip name="ИмпортНомерСтрокиРасширеннаяПодсказка" id="308"/>
+								</LabelField>
+								<InputField name="ИмпортТипСсылкаОбъекта" id="312">
+									<DataPath>Объект.Импорт.ТипСсылкаОбъекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортТипСсылкаОбъектаКонтекстноеМеню" id="313"/>
+									<ExtendedTooltip name="ИмпортТипСсылкаОбъектаРасширеннаяПодсказка" id="314"/>
+								</InputField>
+								<InputField name="ИмпортСсылкаОбъекта" id="309">
+									<DataPath>Объект.Импорт.СсылкаОбъекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортСсылкаОбъектаКонтекстноеМеню" id="310"/>
+									<ExtendedTooltip name="ИмпортСсылкаОбъектаРасширеннаяПодсказка" id="311"/>
+								</InputField>
+								<InputField name="ИмпортАттрибут" id="315">
+									<DataPath>Объект.Импорт.Аттрибут</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортАттрибутКонтекстноеМеню" id="316"/>
+									<ExtendedTooltip name="ИмпортАттрибутРасширеннаяПодсказка" id="317"/>
+								</InputField>
+								<InputField name="ИмпортИнтернетМагазин" id="318">
+									<DataPath>Объект.Импорт.ИнтернетМагазин</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортИнтернетМагазинКонтекстноеМеню" id="319"/>
+									<ExtendedTooltip name="ИмпортИнтернетМагазинРасширеннаяПодсказка" id="320"/>
+								</InputField>
+								<InputField name="ИмпортЗначение" id="321">
+									<DataPath>Объект.Импорт.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортЗначениеКонтекстноеМеню" id="322"/>
+									<ExtendedTooltip name="ИмпортЗначениеРасширеннаяПодсказка" id="323"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -1099,7 +1200,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить</v8:content>
+					<v8:content>Записать</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1135,6 +1236,19 @@
 			<Action>КомандаГабаритыЗаписать</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<AssociatedTableElementId xsi:type="xs:string">Габариты</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаИмпортЗаписать" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаИмпортЗаписать</Action>
 		</Command>
 	</Commands>
 </Form>
