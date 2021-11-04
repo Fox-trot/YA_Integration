@@ -535,6 +535,188 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаЦвета" id="219">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа цвета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="220"/>
+					<ChildItems>
+						<Table name="Цвета" id="221">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Цвета</DataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЦветаКонтекстноеМеню" id="222"/>
+							<AutoCommandBar name="ЦветаКоманднаяПанель" id="223">
+								<ChildItems>
+									<Button name="ЦветаКомандаЦветаСохранить" id="246">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЦветаСохранить</CommandName>
+										<ExtendedTooltip name="ЦветаКомандаЦветаСохранитьРасширеннаяПодсказка" id="247"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЦветаРасширеннаяПодсказка" id="224"/>
+							<SearchStringAddition name="ЦветаСтрокаПоиска" id="225">
+								<AdditionSource>
+									<Item>Цвета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦветаСтрокаПоискаКонтекстноеМеню" id="226"/>
+								<ExtendedTooltip name="ЦветаСтрокаПоискаРасширеннаяПодсказка" id="227"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦветаСостояниеПросмотра" id="228">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>Цвета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦветаСостояниеПросмотраКонтекстноеМеню" id="229"/>
+								<ExtendedTooltip name="ЦветаСостояниеПросмотраРасширеннаяПодсказка" id="230"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦветаУправлениеПоиском" id="231">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>Цвета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦветаУправлениеПоискомКонтекстноеМеню" id="232"/>
+								<ExtendedTooltip name="ЦветаУправлениеПоискомРасширеннаяПодсказка" id="233"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЦветаСсылкаОбъекта" id="248">
+									<DataPath>Цвета.СсылкаОбъекта</DataPath>
+									<ContextMenu name="ЦветаСсылкаОбъектаКонтекстноеМеню" id="249"/>
+									<ExtendedTooltip name="ЦветаСсылкаОбъектаРасширеннаяПодсказка" id="250"/>
+								</LabelField>
+								<LabelField name="ЦветаАттрибут" id="251">
+									<DataPath>Цвета.Аттрибут</DataPath>
+									<ContextMenu name="ЦветаАттрибутКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="ЦветаАттрибутРасширеннаяПодсказка" id="253"/>
+								</LabelField>
+								<LabelField name="ЦветаИнтернетМагазин" id="254">
+									<DataPath>Цвета.ИнтернетМагазин</DataPath>
+									<ContextMenu name="ЦветаИнтернетМагазинКонтекстноеМеню" id="255"/>
+									<ExtendedTooltip name="ЦветаИнтернетМагазинРасширеннаяПодсказка" id="256"/>
+								</LabelField>
+								<LabelField name="ЦветаЗначение" id="257">
+									<DataPath>Цвета.Значение</DataPath>
+									<ContextMenu name="ЦветаЗначениеКонтекстноеМеню" id="258"/>
+									<ExtendedTooltip name="ЦветаЗначениеРасширеннаяПодсказка" id="259"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаГабариты" id="260">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Габариты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаГабаритыРасширеннаяПодсказка" id="261"/>
+					<ChildItems>
+						<Table name="Габариты" id="262">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Габариты</DataPath>
+							<RowPictureDataPath>Габариты.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ГабаритыКонтекстноеМеню" id="263"/>
+							<AutoCommandBar name="ГабаритыКоманднаяПанель" id="264">
+								<ChildItems>
+									<Button name="ГабаритыКомандаГабаритыЗаписать" id="287">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаГабаритыЗаписать</CommandName>
+										<ExtendedTooltip name="ГабаритыКомандаГабаритыЗаписатьРасширеннаяПодсказка" id="288"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ГабаритыРасширеннаяПодсказка" id="265"/>
+							<SearchStringAddition name="ГабаритыСтрокаПоиска" id="266">
+								<AdditionSource>
+									<Item>Габариты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГабаритыСтрокаПоискаКонтекстноеМеню" id="267"/>
+								<ExtendedTooltip name="ГабаритыСтрокаПоискаРасширеннаяПодсказка" id="268"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГабаритыСостояниеПросмотра" id="269">
+								<AdditionSource>
+									<Item>Габариты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГабаритыСостояниеПросмотраКонтекстноеМеню" id="270"/>
+								<ExtendedTooltip name="ГабаритыСостояниеПросмотраРасширеннаяПодсказка" id="271"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГабаритыУправлениеПоиском" id="272">
+								<AdditionSource>
+									<Item>Габариты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГабаритыУправлениеПоискомКонтекстноеМеню" id="273"/>
+								<ExtendedTooltip name="ГабаритыУправлениеПоискомРасширеннаяПодсказка" id="274"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГабаритыСсылкаОбъекта" id="275">
+									<DataPath>Габариты.СсылкаОбъекта</DataPath>
+									<ContextMenu name="ГабаритыСсылкаОбъектаКонтекстноеМеню" id="276"/>
+									<ExtendedTooltip name="ГабаритыСсылкаОбъектаРасширеннаяПодсказка" id="277"/>
+								</LabelField>
+								<LabelField name="ГабаритыАттрибут" id="278">
+									<DataPath>Габариты.Аттрибут</DataPath>
+									<ContextMenu name="ГабаритыАттрибутКонтекстноеМеню" id="279"/>
+									<ExtendedTooltip name="ГабаритыАттрибутРасширеннаяПодсказка" id="280"/>
+								</LabelField>
+								<LabelField name="ГабаритыИнтернетМагазин" id="281">
+									<DataPath>Габариты.ИнтернетМагазин</DataPath>
+									<ContextMenu name="ГабаритыИнтернетМагазинКонтекстноеМеню" id="282"/>
+									<ExtendedTooltip name="ГабаритыИнтернетМагазинРасширеннаяПодсказка" id="283"/>
+								</LabelField>
+								<LabelField name="ГабаритыЗначение" id="284">
+									<DataPath>Габариты.Значение</DataPath>
+									<ContextMenu name="ГабаритыЗначениеКонтекстноеМеню" id="285"/>
+									<ExtendedTooltip name="ГабаритыЗначениеРасширеннаяПодсказка" id="286"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -617,6 +799,81 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="Цвета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.мп_ДанныеКарточек</MainTable>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Аттрибут</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.мп_АттрибутыКарточек.Цвет</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Габариты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Габариты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.мп_ДанныеКарточек</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Аттрибут</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.мп_АттрибутыКарточек.dimension_unit</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -837,6 +1094,47 @@
 			<Action>КомандаКатегорииЗаписать</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<AssociatedTableElementId xsi:type="xs:string">Категории</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаЦветаСохранить" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвета сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЦветаСохранить</Action>
+			<AssociatedTableElementId xsi:type="xs:string">Цвета</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаГабаритыЗаписать" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Габариты записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаГабаритыЗаписать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<AssociatedTableElementId xsi:type="xs:string">Габариты</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
