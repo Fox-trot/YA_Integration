@@ -172,6 +172,9 @@
 		</UsualGroup>
 		<Pages name="ГруппаОсновная" id="97">
 			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="98"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаОсновнаяПриСменеСтраницы</Event>
+			</Events>
 			<ChildItems>
 				<Page name="ГруппаЦены" id="99">
 					<Title>
@@ -186,6 +189,7 @@
 						<Table name="Цены" id="36">
 							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
+							<ChoiceMode>true</ChoiceMode>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -236,6 +240,9 @@
 								<ContextMenu name="ЦеныУправлениеПоискомКонтекстноеМеню" id="47"/>
 								<ExtendedTooltip name="ЦеныУправлениеПоискомРасширеннаяПодсказка" id="48"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">СписокКарточекВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ЦеныНомерСтроки" id="135">
 									<DataPath>Объект.Цены.LineNumber</DataPath>
@@ -258,14 +265,14 @@
 									<ExtendedTooltip name="ЦеныНоменклатураРасширеннаяПодсказка" id="143"/>
 								</InputField>
 								<InputField name="ЦеныЦенаБазовая" id="144">
-									<DataPath>Объект.Цены.ЦенаБазовая</DataPath>
+									<DataPath>Объект.Цены.ЦенаБазис</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЦеныЦенаБазоваяКонтекстноеМеню" id="145"/>
 									<ExtendedTooltip name="ЦеныЦенаБазоваяРасширеннаяПодсказка" id="146"/>
 								</InputField>
 								<InputField name="ЦеныЦенаРасчетная" id="147">
-									<DataPath>Объект.Цены.ЦенаРасчетная</DataPath>
+									<DataPath>Объект.Цены.Цена</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЦеныЦенаРасчетнаяКонтекстноеМеню" id="148"/>
@@ -400,6 +407,7 @@
 					<ExtendedTooltip name="ГруппаКатегорииРасширеннаяПодсказка" id="162"/>
 					<ChildItems>
 						<Table name="Категории" id="163">
+							<ChoiceMode>true</ChoiceMode>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.Категории</DataPath>
@@ -548,6 +556,7 @@
 							<v8:content>Группа цвета</v8:content>
 						</v8:item>
 					</ToolTip>
+					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="220"/>
 					<ChildItems>
 						<Table name="Цвета" id="221">
@@ -634,6 +643,7 @@
 							<v8:content>Габариты</v8:content>
 						</v8:item>
 					</Title>
+					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаГабаритыРасширеннаяПодсказка" id="261"/>
 					<ChildItems>
 						<Table name="Габариты" id="262">
@@ -818,6 +828,447 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаСписокСоздаваемыхКарточек" id="326">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список создаваемых карточек</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>1/0:5da1a3ce-9213-4c84-829b-825b3316b1c2/100000000</TitleDataPath>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаСписокСоздаваемыхКарточекРасширеннаяПодсказка" id="327"/>
+					<ChildItems>
+						<Table name="СписокКарточек" id="416">
+							<ChoiceMode>true</ChoiceMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СписокКарточек</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокКарточекКонтекстноеМеню" id="417"/>
+							<AutoCommandBar name="СписокКарточекКоманднаяПанель" id="418">
+								<ChildItems>
+									<Button name="СписокСоздаваемыхКарточекКомандаФайлЗагрузить" id="414">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаФайлЗагрузить</CommandName>
+										<ExtendedTooltip name="СписокСоздаваемыхКарточекКомандаФайлЗагрузитьРасширеннаяПодсказка" id="415"/>
+									</Button>
+									<Button name="СписокКарточекКомандаСписокКарточекЗаписать" id="461">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаСписокКарточекЗаписать</CommandName>
+										<ExtendedTooltip name="СписокКарточекКомандаСписокКарточекЗаписатьРасширеннаяПодсказка" id="462"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокКарточекРасширеннаяПодсказка" id="419"/>
+							<SearchStringAddition name="СписокКарточекСтрокаПоиска" id="420">
+								<AdditionSource>
+									<Item>СписокКарточек</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКарточекСтрокаПоискаКонтекстноеМеню" id="421"/>
+								<ExtendedTooltip name="СписокКарточекСтрокаПоискаРасширеннаяПодсказка" id="422"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКарточекСостояниеПросмотра" id="423">
+								<AdditionSource>
+									<Item>СписокКарточек</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКарточекСостояниеПросмотраКонтекстноеМеню" id="424"/>
+								<ExtendedTooltip name="СписокКарточекСостояниеПросмотраРасширеннаяПодсказка" id="425"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКарточекУправлениеПоиском" id="426">
+								<AdditionSource>
+									<Item>СписокКарточек</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКарточекУправлениеПоискомКонтекстноеМеню" id="427"/>
+								<ExtendedTooltip name="СписокКарточекУправлениеПоискомРасширеннаяПодсказка" id="428"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">СписокКарточекВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокКарточекНомерСтроки" id="429">
+									<DataPath>Объект.СписокКарточек.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекНомерСтрокиКонтекстноеМеню" id="430"/>
+									<ExtendedTooltip name="СписокКарточекНомерСтрокиРасширеннаяПодсказка" id="431"/>
+								</LabelField>
+								<InputField name="СписокКарточекНоменклатура" id="432">
+									<DataPath>Объект.СписокКарточек.Номенклатура</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекНоменклатураКонтекстноеМеню" id="433"/>
+									<ExtendedTooltip name="СписокКарточекНоменклатураРасширеннаяПодсказка" id="434"/>
+								</InputField>
+								<InputField name="СписокКарточекХарактеристика" id="435">
+									<DataPath>Объект.СписокКарточек.Характеристика</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекХарактеристикаКонтекстноеМеню" id="436"/>
+									<ExtendedTooltip name="СписокКарточекХарактеристикаРасширеннаяПодсказка" id="437"/>
+								</InputField>
+								<InputField name="СписокКарточекЦвет" id="438">
+									<DataPath>Объект.СписокКарточек.Цвет</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекЦветКонтекстноеМеню" id="439"/>
+									<ExtendedTooltip name="СписокКарточекЦветРасширеннаяПодсказка" id="440"/>
+								</InputField>
+								<InputField name="СписокКарточекРосРазмер" id="441">
+									<DataPath>Объект.СписокКарточек.РосРазмер</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекРосРазмерКонтекстноеМеню" id="442"/>
+									<ExtendedTooltip name="СписокКарточекРосРазмерРасширеннаяПодсказка" id="443"/>
+								</InputField>
+								<InputField name="СписокКарточекСостав" id="444">
+									<DataPath>Объект.СписокКарточек.Состав</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекСоставКонтекстноеМеню" id="445"/>
+									<ExtendedTooltip name="СписокКарточекСоставРасширеннаяПодсказка" id="446"/>
+								</InputField>
+								<InputField name="СписокКарточекТНВЭД" id="447">
+									<DataPath>Объект.СписокКарточек.ТНВЭД</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекТНВЭДКонтекстноеМеню" id="448"/>
+									<ExtendedTooltip name="СписокКарточекТНВЭДРасширеннаяПодсказка" id="449"/>
+								</InputField>
+								<InputField name="СписокКарточекЦенаБазис" id="453">
+									<DataPath>Объект.СписокКарточек.ЦенаБазис</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекЦенаБазисКонтекстноеМеню" id="454"/>
+									<ExtendedTooltip name="СписокКарточекЦенаБазисРасширеннаяПодсказка" id="455"/>
+								</InputField>
+								<InputField name="СписокКарточекЦена" id="456">
+									<DataPath>Объект.СписокКарточек.Цена</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекЦенаКонтекстноеМеню" id="457"/>
+									<ExtendedTooltip name="СписокКарточекЦенаРасширеннаяПодсказка" id="458"/>
+								</InputField>
+								<InputField name="СписокКарточекПериод" id="463">
+									<DataPath>Объект.СписокКарточек.Период</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекПериодКонтекстноеМеню" id="464"/>
+									<ExtendedTooltip name="СписокКарточекПериодРасширеннаяПодсказка" id="465"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Группа1" id="459">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список создаваемых карточек (регистр)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<AssociatedTableElementId xsi:type="xs:string">СписокСоздаваемыхКарточек</AssociatedTableElementId>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="460"/>
+							<ChildItems>
+								<Table name="СписокСоздаваемыхКарточек" id="328">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоздаваемыхКарточек</DataPath>
+									<RowPictureDataPath>СписокСоздаваемыхКарточек.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>true</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокСоздаваемыхКарточекКонтекстноеМеню" id="329"/>
+									<AutoCommandBar name="СписокСоздаваемыхКарточекКоманднаяПанель" id="330">
+										<ChildItems>
+											<Button name="СписокСоздаваемыхКарточекКомандаСписокСгенерировать" id="410">
+												<Type>CommandBarButton</Type>
+												<Enabled>false</Enabled>
+												<CommandName>Form.Command.КомандаСписокСгенерировать</CommandName>
+												<ExtendedTooltip name="СписокСоздаваемыхКарточекКомандаСписокСгенерироватьРасширеннаяПодсказка" id="411"/>
+											</Button>
+											<Button name="СписокСоздаваемыхКарточекКомандаСписокКарточекОчистить" id="412">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаСписокКарточекОчистить</CommandName>
+												<ExtendedTooltip name="СписокСоздаваемыхКарточекКомандаСписокКарточекОчиститьРасширеннаяПодсказка" id="413"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокСоздаваемыхКарточекРасширеннаяПодсказка" id="331"/>
+									<SearchStringAddition name="СписокСоздаваемыхКарточекСтрокаПоиска" id="332">
+										<AdditionSource>
+											<Item>СписокСоздаваемыхКарточек</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоздаваемыхКарточекСтрокаПоискаКонтекстноеМеню" id="333"/>
+										<ExtendedTooltip name="СписокСоздаваемыхКарточекСтрокаПоискаРасширеннаяПодсказка" id="334"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСоздаваемыхКарточекСостояниеПросмотра" id="335">
+										<AdditionSource>
+											<Item>СписокСоздаваемыхКарточек</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоздаваемыхКарточекСостояниеПросмотраКонтекстноеМеню" id="336"/>
+										<ExtendedTooltip name="СписокСоздаваемыхКарточекСостояниеПросмотраРасширеннаяПодсказка" id="337"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокСоздаваемыхКарточекУправлениеПоиском" id="338">
+										<AdditionSource>
+											<Item>СписокСоздаваемыхКарточек</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоздаваемыхКарточекУправлениеПоискомКонтекстноеМеню" id="339"/>
+										<ExtendedTooltip name="СписокСоздаваемыхКарточекУправлениеПоискомРасширеннаяПодсказка" id="340"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СписокСоздаваемыхКарточекНоменклатура" id="344">
+											<DataPath>СписокСоздаваемыхКарточек.Номенклатура</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекНоменклатураКонтекстноеМеню" id="345"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекНоменклатураРасширеннаяПодсказка" id="346"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекХарактеристика" id="341">
+											<DataPath>СписокСоздаваемыхКарточек.Характеристика</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекХарактеристикаКонтекстноеМеню" id="342"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекХарактеристикаРасширеннаяПодсказка" id="343"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекИнтернетМагазин" id="347">
+											<DataPath>СписокСоздаваемыхКарточек.ИнтернетМагазин</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекИнтернетМагазинКонтекстноеМеню" id="348"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекИнтернетМагазинРасширеннаяПодсказка" id="349"/>
+										</LabelField>
+										<CheckBoxField name="СписокСоздаваемыхКарточекСоздан" id="350">
+											<DataPath>СписокСоздаваемыхКарточек.Создан</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СписокСоздаваемыхКарточекСозданКонтекстноеМеню" id="351"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекСозданРасширеннаяПодсказка" id="352"/>
+										</CheckBoxField>
+										<LabelField name="СписокСоздаваемыхКарточекcountryProduction" id="353">
+											<DataPath>СписокСоздаваемыхКарточек.countryProduction</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекcountryProductionКонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекcountryProductionРасширеннаяПодсказка" id="355"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекПол" id="356">
+											<DataPath>СписокСоздаваемыхКарточек.Пол</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекПолКонтекстноеМеню" id="357"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекПолРасширеннаяПодсказка" id="358"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекЦвет" id="359">
+											<DataPath>СписокСоздаваемыхКарточек.Цвет</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекЦветКонтекстноеМеню" id="360"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекЦветРасширеннаяПодсказка" id="361"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекЦена" id="362">
+											<DataPath>СписокСоздаваемыхКарточек.Цена</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекЦенаКонтекстноеМеню" id="363"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекЦенаРасширеннаяПодсказка" id="364"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекРосРазмер" id="365">
+											<DataPath>СписокСоздаваемыхКарточек.РосРазмер</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекРосРазмерКонтекстноеМеню" id="366"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекРосРазмерРасширеннаяПодсказка" id="367"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекСостав" id="368">
+											<DataPath>СписокСоздаваемыхКарточек.Состав</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекСоставКонтекстноеМеню" id="369"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекСоставРасширеннаяПодсказка" id="370"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекТНВЭД" id="371">
+											<DataPath>СписокСоздаваемыхКарточек.ТНВЭД</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекТНВЭДКонтекстноеМеню" id="372"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекТНВЭДРасширеннаяПодсказка" id="373"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекКомплектация" id="374">
+											<DataPath>СписокСоздаваемыхКарточек.Комплектация</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекКомплектацияКонтекстноеМеню" id="375"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекКомплектацияРасширеннаяПодсказка" id="376"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекobject" id="377">
+											<DataPath>СписокСоздаваемыхКарточек.object</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекobjectКонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекobjectРасширеннаяПодсказка" id="379"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекparent" id="380">
+											<DataPath>СписокСоздаваемыхКарточек.parent</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекparentКонтекстноеМеню" id="381"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекparentРасширеннаяПодсказка" id="382"/>
+										</LabelField>
+										<CheckBoxField name="СписокСоздаваемыхКарточекЕстьФото" id="383">
+											<DataPath>СписокСоздаваемыхКарточек.ЕстьФото</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СписокСоздаваемыхКарточекЕстьФотоКонтекстноеМеню" id="384"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекЕстьФотоРасширеннаяПодсказка" id="385"/>
+										</CheckBoxField>
+										<LabelField name="СписокСоздаваемыхКарточекError" id="386">
+											<DataPath>СписокСоздаваемыхКарточек.Error</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекErrorКонтекстноеМеню" id="387"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекErrorРасширеннаяПодсказка" id="388"/>
+										</LabelField>
+										<CheckBoxField name="СписокСоздаваемыхКарточекОК" id="389">
+											<DataPath>СписокСоздаваемыхКарточек.ОК</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СписокСоздаваемыхКарточекОККонтекстноеМеню" id="390"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекОКРасширеннаяПодсказка" id="391"/>
+										</CheckBoxField>
+										<LabelField name="СписокСоздаваемыхКарточекЦенаБазис" id="392">
+											<DataPath>СписокСоздаваемыхКарточек.ЦенаБазис</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекЦенаБазисКонтекстноеМеню" id="393"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекЦенаБазисРасширеннаяПодсказка" id="394"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекОшибка" id="395">
+											<DataPath>СписокСоздаваемыхКарточек.Ошибка</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекОшибкаКонтекстноеМеню" id="396"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекОшибкаРасширеннаяПодсказка" id="397"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекДатаОбработки" id="398">
+											<DataPath>СписокСоздаваемыхКарточек.ДатаОбработки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекДатаОбработкиКонтекстноеМеню" id="399"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекДатаОбработкиРасширеннаяПодсказка" id="400"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекДатаДобавления" id="401">
+											<DataPath>СписокСоздаваемыхКарточек.ДатаДобавления</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекДатаДобавленияКонтекстноеМеню" id="402"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекДатаДобавленияРасширеннаяПодсказка" id="403"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекШтрихкодИД" id="404">
+											<DataPath>СписокСоздаваемыхКарточек.ШтрихкодИД</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекШтрихкодИДКонтекстноеМеню" id="405"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекШтрихкодИДРасширеннаяПодсказка" id="406"/>
+										</LabelField>
+										<LabelField name="СписокСоздаваемыхКарточекШтрихкодИД2" id="407">
+											<DataPath>СписокСоздаваемыхКарточек.ШтрихкодИД2</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="СписокСоздаваемыхКарточекШтрихкодИД2КонтекстноеМеню" id="408"/>
+											<ExtendedTooltip name="СписокСоздаваемыхКарточекШтрихкодИД2РасширеннаяПодсказка" id="409"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНапильник" id="466">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Напильник</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНапильникРасширеннаяПодсказка" id="467"/>
+					<ChildItems>
+						<Table name="Проблемные" id="468">
+							<ChangeRowSet>false</ChangeRowSet>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Проблемные</DataPath>
+							<RowPictureDataPath>Проблемные.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПроблемныеКонтекстноеМеню" id="469"/>
+							<AutoCommandBar name="ПроблемныеКоманднаяПанель" id="470">
+								<ChildItems>
+									<Button name="ПроблемныеКомандаПроблемныеКарточкиИсправить" id="487">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаПроблемныеКарточкиИсправить</CommandName>
+										<ExtendedTooltip name="ПроблемныеКомандаПроблемныеКарточкиИсправитьРасширеннаяПодсказка" id="488"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПроблемныеРасширеннаяПодсказка" id="471"/>
+							<SearchStringAddition name="ПроблемныеСтрокаПоиска" id="472">
+								<AdditionSource>
+									<Item>Проблемные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроблемныеСтрокаПоискаКонтекстноеМеню" id="473"/>
+								<ExtendedTooltip name="ПроблемныеСтрокаПоискаРасширеннаяПодсказка" id="474"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроблемныеСостояниеПросмотра" id="475">
+								<AdditionSource>
+									<Item>Проблемные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроблемныеСостояниеПросмотраКонтекстноеМеню" id="476"/>
+								<ExtendedTooltip name="ПроблемныеСостояниеПросмотраРасширеннаяПодсказка" id="477"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроблемныеУправлениеПоиском" id="478">
+								<AdditionSource>
+									<Item>Проблемные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроблемныеУправлениеПоискомКонтекстноеМеню" id="479"/>
+								<ExtendedTooltip name="ПроблемныеУправлениеПоискомРасширеннаяПодсказка" id="480"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПроблемныеКатегория" id="481">
+									<DataPath>Проблемные.Категория</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ПроблемныеКатегорияКонтекстноеМеню" id="482"/>
+									<ExtendedTooltip name="ПроблемныеКатегорияРасширеннаяПодсказка" id="483"/>
+								</LabelField>
+								<LabelField name="ПроблемныеЗначение" id="489">
+									<DataPath>Проблемные.Значение</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ПроблемныеЗначениеКонтекстноеМеню" id="490"/>
+									<ExtendedTooltip name="ПроблемныеЗначениеРасширеннаяПодсказка" id="491"/>
+								</LabelField>
+								<LabelField name="ПроблемныеКоличество" id="484">
+									<DataPath>Проблемные.Количество</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ПроблемныеКоличествоКонтекстноеМеню" id="485"/>
+									<ExtendedTooltip name="ПроблемныеКоличествоРасширеннаяПодсказка" id="486"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -851,7 +1302,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текст запроса</v8:content>
+					<v8:content>Файл</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -915,7 +1366,6 @@
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<MainTable>InformationRegister.мп_ДанныеКарточек</MainTable>
-				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -924,7 +1374,6 @@
 							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.мп_АттрибутыКарточек.Цвет</dcsset:right>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -964,6 +1413,153 @@
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСоздаваемыхКарточек" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список создаваемых карточек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокСоздаваемыхКарточек.ИнтернетМагазин</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Характеристика КАК Характеристика,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Номенклатура КАК Номенклатура,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ИнтернетМагазин КАК ИнтернетМагазин,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Создан КАК Создан,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.countryProduction КАК countryProduction,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Пол КАК Пол,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Цвет КАК Цвет,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Цена КАК Цена,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.РосРазмер КАК РосРазмер,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Состав КАК Состав,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ТНВЭД КАК ТНВЭД,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Комплектация КАК Комплектация,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.object КАК object,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.parent КАК parent,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ЕстьФото КАК ЕстьФото,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Error КАК Error,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ОК КАК ОК,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ЦенаБазис КАК ЦенаБазис,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.Ошибка КАК Ошибка,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ДатаОбработки КАК ДатаОбработки,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ДатаДобавления КАК ДатаДобавления,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ШтрихкодИД КАК ШтрихкодИД,
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ШтрихкодИД2 КАК ШтрихкодИД2
+ИЗ
+	РегистрСведений.мп_СписокСоздаваемыхКарточек КАК РегистрСведениймп_СписокСоздаваемыхКарточек
+ГДЕ
+	РегистрСведениймп_СписокСоздаваемыхКарточек.ИнтернетМагазин = &amp;ИнтернетМагазин</QueryText>
+				<MainTable>InformationRegister.мп_СписокСоздаваемыхКарточек</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Проблемные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Проблемные.Значение</Field>
+				<Field>Проблемные.Категория</Field>
+				<Field>Проблемные.Количество</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ПОДСТРОКА(Категории.Значение, 1, 100) КАК Категория,
+	МИНИМУМ(ПОДСТРОКА(КатегорииИД.Значение, 1, 20)) КАК Значение,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПОДСТРОКА(КатегорииИД.Значение, 1, 20)) КАК Количество
+ИЗ
+	РегистрСведений.мп_ДанныеКарточек КАК Категории
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.мп_ДанныеКарточек КАК КатегорииИД
+		ПО Категории.СсылкаОбъекта = КатегорииИД.СсылкаОбъекта
+			И Категории.ИнтернетМагазин = КатегорииИД.ИнтернетМагазин
+ГДЕ
+	Категории.ИнтернетМагазин = &amp;ИнтернетМагазин
+	И Категории.Аттрибут = ЗНАЧЕНИЕ(Справочник.мп_АттрибутыКарточек.Категория)
+	И КатегорииИД.Аттрибут = ЗНАЧЕНИЕ(Справочник.мп_АттрибутыКарточек.КатегорияID)
+	И ПОДСТРОКА(КатегорииИД.Значение, 1, 20) &gt; " "
+
+СГРУППИРОВАТЬ ПО
+	ПОДСТРОКА(Категории.Значение, 1, 100)
+
+ИМЕЮЩИЕ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПОДСТРОКА(КатегорииИД.Значение, 1, 20)) &gt; 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПОДСТРОКА(Категории.Значение, 1, 100),
+	МИНИМУМ(ПОДСТРОКА(КатегорииИД.Значение, 1, 20)),
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПОДСТРОКА(КатегорииИД.Значение, 1, 20))
+ИЗ
+	РегистрСведений.мп_ДанныеКарточек КАК Категории
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.мп_ДанныеКарточек КАК КатегорииИД
+		ПО Категории.СсылкаОбъекта = КатегорииИД.СсылкаОбъекта
+			И Категории.ИнтернетМагазин = КатегорииИД.ИнтернетМагазин
+ГДЕ
+	Категории.ИнтернетМагазин = &amp;ИнтернетМагазин
+	И Категории.Аттрибут = ЗНАЧЕНИЕ(Справочник.мп_АттрибутыКарточек.Комплектация)
+	И КатегорииИД.Аттрибут = ЗНАЧЕНИЕ(Справочник.мп_АттрибутыКарточек.КомплектацияID)
+	И ПОДСТРОКА(КатегорииИД.Значение, 1, 20) &gt; " "
+
+СГРУППИРОВАТЬ ПО
+	ПОДСТРОКА(Категории.Значение, 1, 100)
+
+ИМЕЮЩИЕ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПОДСТРОКА(КатегорииИД.Значение, 1, 20)) &gt; 1</QueryText>
+				<MainTable>InformationRegister.мп_ДанныеКарточек</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Значение</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
@@ -1119,6 +1715,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаФайлЗагрузить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Цены</AssociatedTableElementId>
 		</Command>
@@ -1214,6 +1811,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаЦветаСохранить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<AssociatedTableElementId xsi:type="xs:string">Цвета</AssociatedTableElementId>
 		</Command>
 		<Command name="КомандаГабаритыЗаписать" id="15">
@@ -1249,6 +1847,78 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаИмпортЗаписать</Action>
+		</Command>
+		<Command name="КомандаСписокСгенерировать" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда список сгенерировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСписокСгенерировать</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">СписокСоздаваемыхКарточек</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаСписокКарточекОчистить" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаСписокКарточекОчистить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<AssociatedTableElementId xsi:type="xs:string">СписокСоздаваемыхКарточек</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаСписокКарточекЗаписать" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда список карточек записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСписокКарточекЗаписать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СписокКарточек</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаПроблемныеКарточкиИсправить" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда проблемные карточки исправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПроблемныеКарточкиИсправить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Проблемные</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
