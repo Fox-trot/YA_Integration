@@ -69,6 +69,7 @@
 			<ChildItems>
 				<InputField name="ИнтернетМагазин" id="3">
 					<DataPath>Объект.ИнтернетМагазин</DataPath>
+					<Enabled>false</Enabled>
 					<ContextMenu name="ИнтернетМагазинКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="ИнтернетМагазинРасширеннаяПодсказка" id="5"/>
 					<Events>
@@ -96,6 +97,7 @@
 			<ChildItems>
 				<CheckBoxField name="ЭтоТест" id="18">
 					<DataPath>Объект.ЭтоТест</DataPath>
+					<Visible>false</Visible>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЭтоТестКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="ЭтоТестРасширеннаяПодсказка" id="20"/>
@@ -189,7 +191,6 @@
 						<Table name="Цены" id="36">
 							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
-							<ChoiceMode>true</ChoiceMode>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -407,7 +408,6 @@
 					<ExtendedTooltip name="ГруппаКатегорииРасширеннаяПодсказка" id="162"/>
 					<ChildItems>
 						<Table name="Категории" id="163">
-							<ChoiceMode>true</ChoiceMode>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.Категории</DataPath>
@@ -840,7 +840,6 @@
 					<ExtendedTooltip name="ГруппаСписокСоздаваемыхКарточекРасширеннаяПодсказка" id="327"/>
 					<ChildItems>
 						<Table name="СписокКарточек" id="416">
-							<ChoiceMode>true</ChoiceMode>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1283,6 +1282,121 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаСписокЗагруженныхКарточек" id="498">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список созданных карточек</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список загруженных карточек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>1/0:40ade079-8ad7-4ccd-a945-2791cec0689e/100000000</TitleDataPath>
+					<ExtendedTooltip name="ГруппаСписокЗагруженныхКарточекРасширеннаяПодсказка" id="499"/>
+					<ChildItems>
+						<Table name="Загруженные" id="500">
+							<AutoMaxRowsCount>false</AutoMaxRowsCount>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Загруженные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗагруженныеКонтекстноеМеню" id="501"/>
+							<AutoCommandBar name="ЗагруженныеКоманднаяПанель" id="502">
+								<ChildItems>
+									<Button name="ЗагруженныеКомандаФайлЗагрузить" id="528">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаФайлЗагрузить</CommandName>
+										<ExtendedTooltip name="ЗагруженныеКомандаФайлЗагрузитьРасширеннаяПодсказка" id="529"/>
+									</Button>
+									<Button name="ЗагруженныеКомандаКарточкиОтметитьКакСозданные" id="533">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаКарточкиОтметитьКакСозданные</CommandName>
+										<ExtendedTooltip name="ЗагруженныеКомандаКарточкиОтметитьКакСозданныеРасширеннаяПодсказка" id="534"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗагруженныеРасширеннаяПодсказка" id="503"/>
+							<SearchStringAddition name="ЗагруженныеСтрокаПоиска" id="504">
+								<AdditionSource>
+									<Item>Загруженные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагруженныеСтрокаПоискаКонтекстноеМеню" id="505"/>
+								<ExtendedTooltip name="ЗагруженныеСтрокаПоискаРасширеннаяПодсказка" id="506"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗагруженныеСостояниеПросмотра" id="507">
+								<AdditionSource>
+									<Item>Загруженные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагруженныеСостояниеПросмотраКонтекстноеМеню" id="508"/>
+								<ExtendedTooltip name="ЗагруженныеСостояниеПросмотраРасширеннаяПодсказка" id="509"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗагруженныеУправлениеПоиском" id="510">
+								<AdditionSource>
+									<Item>Загруженные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗагруженныеУправлениеПоискомКонтекстноеМеню" id="511"/>
+								<ExtendedTooltip name="ЗагруженныеУправлениеПоискомРасширеннаяПодсказка" id="512"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">СписокКарточекВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЗагруженныеНомерСтроки" id="513">
+									<DataPath>Объект.Загруженные.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="ЗагруженныеНомерСтрокиКонтекстноеМеню" id="514"/>
+									<ExtendedTooltip name="ЗагруженныеНомерСтрокиРасширеннаяПодсказка" id="515"/>
+								</LabelField>
+								<CheckBoxField name="ЗагруженныеСоздан" id="530">
+									<DataPath>Объект.Загруженные.Создан</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗагруженныеСозданКонтекстноеМеню" id="531"/>
+									<ExtendedTooltip name="ЗагруженныеСозданРасширеннаяПодсказка" id="532"/>
+								</CheckBoxField>
+								<InputField name="Загруженныеoffer_id" id="516">
+									<DataPath>Объект.Загруженные.offer_id</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Загруженныеoffer_idКонтекстноеМеню" id="517"/>
+									<ExtendedTooltip name="Загруженныеoffer_idРасширеннаяПодсказка" id="518"/>
+								</InputField>
+								<InputField name="ЗагруженныеАртикул" id="519">
+									<DataPath>Объект.Загруженные.Артикул</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗагруженныеАртикулКонтекстноеМеню" id="520"/>
+									<ExtendedTooltip name="ЗагруженныеАртикулРасширеннаяПодсказка" id="521"/>
+								</InputField>
+								<InputField name="ЗагруженныеНоменклатура" id="522">
+									<DataPath>Объект.Загруженные.Номенклатура</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗагруженныеНоменклатураКонтекстноеМеню" id="523"/>
+									<ExtendedTooltip name="ЗагруженныеНоменклатураРасширеннаяПодсказка" id="524"/>
+								</InputField>
+								<InputField name="ЗагруженныеХарактеристика" id="525">
+									<DataPath>Объект.Загруженные.Характеристика</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗагруженныеХарактеристикаКонтекстноеМеню" id="526"/>
+									<ExtendedTooltip name="ЗагруженныеХарактеристикаРасширеннаяПодсказка" id="527"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1365,6 +1479,9 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+			<Save>
+				<Field>ВариантЗагрузки</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Цвета" id="4">
 			<Title>
@@ -1932,6 +2049,29 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Проблемные</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаКарточкиОтметитьКакСозданные" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить как созданные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда карточки отметить как созданные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаКарточкиОтметитьКакСозданные</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Загруженные</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
