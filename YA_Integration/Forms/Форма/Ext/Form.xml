@@ -896,6 +896,13 @@
 									<ContextMenu name="СписокКарточекНомерСтрокиКонтекстноеМеню" id="430"/>
 									<ExtendedTooltip name="СписокКарточекНомерСтрокиРасширеннаяПодсказка" id="431"/>
 								</LabelField>
+								<InputField name="СписокКарточекШтрихкодИД" id="492">
+									<DataPath>Объект.СписокКарточек.ШтрихкодИД</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекШтрихкодИДКонтекстноеМеню" id="493"/>
+									<ExtendedTooltip name="СписокКарточекШтрихкодИДРасширеннаяПодсказка" id="494"/>
+								</InputField>
 								<InputField name="СписокКарточекНоменклатура" id="432">
 									<DataPath>Объект.СписокКарточек.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -958,6 +965,13 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СписокКарточекПериодКонтекстноеМеню" id="464"/>
 									<ExtendedTooltip name="СписокКарточекПериодРасширеннаяПодсказка" id="465"/>
+								</InputField>
+								<InputField name="СписокКарточекОшибка" id="495">
+									<DataPath>Объект.СписокКарточек.Ошибка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекОшибкаКонтекстноеМеню" id="496"/>
+									<ExtendedTooltip name="СписокКарточекОшибкаРасширеннаяПодсказка" id="497"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1715,7 +1729,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаФайлЗагрузить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Цены</AssociatedTableElementId>
 		</Command>
