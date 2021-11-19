@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>use</VerticalScroll>
+	<Scale>90</Scale>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПолучитьЗаказы" id="21">
@@ -132,16 +135,17 @@
 			</Title>
 			<Group>Vertical</Group>
 			<ChildrenAlign>TitlesLeftDataAuto</ChildrenAlign>
+			<VerticalSpacing>None</VerticalSpacing>
 			<Behavior>Collapsible</Behavior>
 			<Collapsed>true</Collapsed>
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>None</Representation>
 			<ShowLeftMargin>false</ShowLeftMargin>
-			<TitleDataPath>ТекстЗапроса</TitleDataPath>
+			<TitleDataPath>ПолноеИмяФайла</TitleDataPath>
 			<ExtendedTooltip name="ГруппаТабДокРасширеннаяПодсказка" id="86"/>
 			<ChildItems>
 				<InputField name="ПолноеИмяФайла" id="87">
-					<DataPath>ТекстЗапроса</DataPath>
+					<DataPath>ПолноеИмяФайла</DataPath>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<Wrap>false</Wrap>
 					<ChoiceButton>true</ChoiceButton>
@@ -213,6 +217,11 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.КомандаЦеныЗаписать</CommandName>
 										<ExtendedTooltip name="ЦеныКомандаЦеныЗаписатьРасширеннаяПодсказка" id="96"/>
+									</Button>
+									<Button name="ЦеныКомандаТЧОчистить" id="537">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаТЧОчистить</CommandName>
+										<ExtendedTooltip name="ЦеныКомандаТЧОчиститьРасширеннаяПодсказка" id="538"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -556,7 +565,6 @@
 							<v8:content>Группа цвета</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="220"/>
 					<ChildItems>
 						<Table name="Цвета" id="221">
@@ -643,7 +651,6 @@
 							<v8:content>Габариты</v8:content>
 						</v8:item>
 					</Title>
-					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаГабаритыРасширеннаяПодсказка" id="261"/>
 					<ChildItems>
 						<Table name="Габариты" id="262">
@@ -760,6 +767,11 @@
 										<CommandName>Form.Command.КомандаИмпортЗаписать</CommandName>
 										<ExtendedTooltip name="ИмпортКомандаИмпортЗаписатьРасширеннаяПодсказка" id="325"/>
 									</Button>
+									<Button name="ИмпортКомандаТЧОчистить" id="542">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаТЧОчистить</CommandName>
+										<ExtendedTooltip name="ИмпортКомандаТЧОчиститьРасширеннаяПодсказка" id="543"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ИмпортРасширеннаяПодсказка" id="296"/>
@@ -836,7 +848,6 @@
 						</v8:item>
 					</Title>
 					<TitleDataPath>1/0:5da1a3ce-9213-4c84-829b-825b3316b1c2/100000000</TitleDataPath>
-					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаСписокСоздаваемыхКарточекРасширеннаяПодсказка" id="327"/>
 					<ChildItems>
 						<Table name="СписокКарточек" id="416">
@@ -857,6 +868,11 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.КомандаСписокКарточекЗаписать</CommandName>
 										<ExtendedTooltip name="СписокКарточекКомандаСписокКарточекЗаписатьРасширеннаяПодсказка" id="462"/>
+									</Button>
+									<Button name="СписокКарточекКомандаТЧОчистить" id="535">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаТЧОчистить</CommandName>
+										<ExtendedTooltip name="СписокКарточекКомандаТЧОчиститьРасширеннаяПодсказка" id="536"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -915,6 +931,13 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СписокКарточекХарактеристикаКонтекстноеМеню" id="436"/>
 									<ExtendedTooltip name="СписокКарточекХарактеристикаРасширеннаяПодсказка" id="437"/>
+								</InputField>
+								<InputField name="СписокКарточекПол" id="539">
+									<DataPath>Объект.СписокКарточек.Пол</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКарточекПолКонтекстноеМеню" id="540"/>
+									<ExtendedTooltip name="СписокКарточекПолРасширеннаяПодсказка" id="541"/>
 								</InputField>
 								<InputField name="СписокКарточекЦвет" id="438">
 									<DataPath>Объект.СписокКарточек.Цвет</DataPath>
@@ -2072,6 +2095,22 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Загруженные</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаТЧОчистить" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ТабЧастьОчистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаТЧОчистить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
