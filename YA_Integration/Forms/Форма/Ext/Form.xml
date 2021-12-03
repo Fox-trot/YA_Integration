@@ -189,7 +189,7 @@
 							<v8:content>Цены</v8:content>
 						</v8:item>
 					</Title>
-					<TitleDataPath>1/0:95bb2433-b4ef-44b6-b862-2e639a335bb3/100000000</TitleDataPath>
+					<TitleDataPath>1/0:244dd69b-d931-4a4e-ba82-72fcab3df5b0/100000000</TitleDataPath>
 					<ExtendedTooltip name="ГруппаЦеныРасширеннаяПодсказка" id="100"/>
 					<ChildItems>
 						<Table name="Цены" id="36">
@@ -299,7 +299,7 @@
 							<v8:content>Размеры</v8:content>
 						</v8:item>
 					</Title>
-					<TitleDataPath>1/0:80addfae-3551-4593-bb57-cb89283a41d7/100000000</TitleDataPath>
+					<TitleDataPath>1/0:29ca2ee0-dabf-4af9-831f-868d8d6b08a4/100000000</TitleDataPath>
 					<ExtendedTooltip name="ГруппаРазмерыРасширеннаяПодсказка" id="102"/>
 					<ChildItems>
 						<Table name="Размеры" id="103">
@@ -847,7 +847,7 @@
 							<v8:content>Список создаваемых карточек</v8:content>
 						</v8:item>
 					</Title>
-					<TitleDataPath>1/0:5da1a3ce-9213-4c84-829b-825b3316b1c2/100000000</TitleDataPath>
+					<TitleDataPath>1/0:229e0e87-8911-4f26-a46b-631ed7bc6ece/100000000</TitleDataPath>
 					<ExtendedTooltip name="ГруппаСписокСоздаваемыхКарточекРасширеннаяПодсказка" id="327"/>
 					<ChildItems>
 						<Table name="СписокКарточек" id="416">
@@ -1318,7 +1318,7 @@
 							<v8:content>Группа список загруженных карточек</v8:content>
 						</v8:item>
 					</ToolTip>
-					<TitleDataPath>1/0:40ade079-8ad7-4ccd-a945-2791cec0689e/100000000</TitleDataPath>
+					<TitleDataPath>1/0:1a59cfeb-e1e1-4f0a-a5b1-65ec94cb25bc/100000000</TitleDataPath>
 					<ExtendedTooltip name="ГруппаСписокЗагруженныхКарточекРасширеннаяПодсказка" id="499"/>
 					<ChildItems>
 						<Table name="Загруженные" id="500">
