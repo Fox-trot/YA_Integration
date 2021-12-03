@@ -1460,6 +1460,7 @@
 								<InputField name="Результат" id="553">
 									<DataPath>Результат</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
 									<ChooseType>false</ChooseType>
 									<ContextMenu name="РезультатКонтекстноеМеню" id="554"/>
